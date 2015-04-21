@@ -37,6 +37,7 @@ import com.android.systemui.qs.tiles.ColorInversionTile;
 import com.android.systemui.qs.tiles.DataSaverTile;
 import com.android.systemui.qs.tiles.DndTile;
 import com.android.systemui.qs.tiles.FlashlightTile;
+import com.android.systemui.qs.tiles.HeadsUpTile;
 import com.android.systemui.qs.tiles.HotspotTile;
 import com.android.systemui.qs.tiles.IntentTile;
 import com.android.systemui.qs.tiles.LocationTile;
@@ -185,6 +186,8 @@ public class QSFactoryImpl implements QSFactory {
                 return mCaffeineTileProvider.get();
             case "adb_network":
                 return mAdbOverNetworkTileProvider.get();
+            case "heads_up":
+                return new HeadsUpTile(mHost);
         }
 
         // Intent tiles.
@@ -211,6 +214,10 @@ public class QSFactoryImpl implements QSFactory {
             return new QSTileBaseView(context, icon, collapsedView);
         } else {
             return new com.android.systemui.qs.tileimpl.QSTileView(context, icon);
+        }
+    }
+}
+droid.systemui.qs.tileimpl.QSTileView(context, icon);
         }
     }
 }

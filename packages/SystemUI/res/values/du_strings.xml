@@ -78,4 +78,16 @@
     <string name="quick_settings_network_adb_enabled_label">ADB over Network</string>
     <string name="quick_settings_network_adb_disabled_label">ADB over Network</string>
     <string name="adb_network_forced_tcp_warn">ADB network forced enabled on port: <xliff:g id="port">%1$s</xliff:g></string>
+
+     <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+
+</resources>
+ring>
+
+>>>>>>> 2450112c7d6... SystemUI: Add heads up tile
 </resources>
