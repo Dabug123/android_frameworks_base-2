@@ -4495,6 +4495,12 @@ public final class Settings {
         public static final String NO_NAVIGATION_NOTIFICATION = "no_navigation_notification";
 
         /**
+         * Three Finger Gesture from Oppo
+         * @hide
+         */
+        public static final String THREE_FINGER_GESTURE = "three_finger_gesture";
+
+        /**
          * Use Dnd when call active
          * @hide
          */
