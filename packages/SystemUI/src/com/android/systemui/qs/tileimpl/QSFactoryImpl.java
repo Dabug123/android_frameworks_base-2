@@ -43,6 +43,7 @@ import com.android.systemui.qs.tiles.NightDisplayTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
 import com.android.systemui.qs.tiles.ThemeTile;
+import com.android.systemui.qs.tiles.SleepScreenTile;
 import com.android.systemui.qs.tiles.UserTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.qs.tiles.WorkModeTile;
@@ -113,6 +114,8 @@ public class QSFactoryImpl implements QSFactory {
                 return new ImmersiveTile(mHost);
             case "music":
                 return new MusicTile(mHost);
+            case "sleepscreen":
+                return new SleepScreenTile(mHost);
         }
 
         // Intent tiles.
