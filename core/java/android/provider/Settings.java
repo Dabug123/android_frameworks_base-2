@@ -4513,7 +4513,13 @@ public final class Settings {
         public static final String SMARTBAR_DOUBLETAP_SLEEP = "smartbar_doubletap_sleep";
 
         /**
-         * Defines the global heads up notification snooze
+         * Whether to show or hide the running services icon
+         * @hide
+         */
+        public static final String QS_RUNNING_SERVICES_TOGGLE = "qs_running_services_toggle";
+
+        /**
+         * Whether to show or hide the expand indicator
          * @hide
          */
         public static final String HEADS_UP_NOTIFICATION_SNOOZE = "heads_up_notification_snooze";
