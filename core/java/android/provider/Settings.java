@@ -4412,7 +4412,6 @@ public final class Settings {
         public static final Validator STATUSBAR_CLOCK_DATE_STYLE_VALIDATOR =
                 new SettingsValidators.InclusiveIntegerRangeValidator(0, 2);
 
-
         /**
          * Stores the java DateFormat string for the date
          * @hide
@@ -4566,6 +4565,12 @@ public final class Settings {
          * @hide
          */
         public static final String MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD = "mute_annoying_notifications_threshold";
+
+        /**
+         * Wheter to show heads up only for dialer and sms apps
+         * @hide
+         */
+        public static final String LESS_BORING_HEADS_UP = "less_boring_heads_up";  
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
