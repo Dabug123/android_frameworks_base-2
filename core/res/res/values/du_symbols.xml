@@ -130,4 +130,8 @@
   <!-- Auto fill -->
   <java-symbol type="color" name="autofill_save_title_color" />
   <java-symbol type="color" name="autofill_autofill_save_custom_subtitle_color" />
+
+  <!-- Whether auto face unlock is enabled by default -->
+  <java-symbol type="bool" name="config_autoFaceUnlockEnabledByDefault" />
+
 </resources>
