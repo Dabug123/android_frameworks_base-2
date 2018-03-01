@@ -4545,7 +4545,12 @@ public final class Settings {
         public static final String SEEK_BAR_BATTERY_CHARGE_LEVEL_SOUND = "battery_level_charge_seek_bar";
 
         /**
-         * Whether to display the 4g or lte network icon in the statusbar
+         * @hide
+         */
+        public static final String NOTIFICATION_GUTS_KILL_APP_BUTTON = "notification_guts_kill_app_button";
+
+        /**
+         * 4g
          * @hide
          */
         public static final String SHOW_LTE_FOURGEE = "show_lte_fourgee";
