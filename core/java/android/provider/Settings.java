@@ -4663,6 +4663,12 @@ public final class Settings {
          */
         public static final String SHOW_LOCKSCREEN_MEDIA_ART = "show_lockscreen_media_art";
 
+       /**
+         * Whether to change the transparency of the qs panel
+         * @hide
+         */
+        public static final String QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
+
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
@@ -15869,6 +15875,11 @@ public final class Settings {
         String[] packages = context.getPackageManager().getPackagesForUid(uid);
         if (packages == null) {
             return null;
+        }
+        return packages[0];
+    }
+}
+  return null;
         }
         return packages[0];
     }
