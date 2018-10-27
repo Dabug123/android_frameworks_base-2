@@ -89,4 +89,9 @@
     <!-- Caffeine tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
 
+    <!-- Music tile -->
+    <string name="quick_settings_music_label">Music</string>
+    <string name="quick_settings_music_play">Play</string>
+    <string name="quick_settings_music_pause">Pause</string>
+
 </resources>
