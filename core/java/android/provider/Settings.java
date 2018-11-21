@@ -4483,7 +4483,8 @@ public final class Settings {
         public static final String FORCE_AMBIENT_FOR_MEDIA = "force_ambient_for_media";
 
         /**
-         * Change quick settings tiles animation style
+         * Whether to display set of animations when prompting the power menu
+         *
          * @hide
          */
         public static final String ANIM_TILE_STYLE = "anim_tile_style";
@@ -4499,6 +4500,20 @@ public final class Settings {
          * @hide
          */
         public static final String ANIM_TILE_INTERPOLATOR = "anim_tile_interpolator";
+
+        /**
+         * Hold current font name and name of the originating package Uses "|" as a delimiter
+         *
+         * @hide
+         */
+        public static final String FONT_INFO = "font_info";
+        
+	    /**
+         * Hold list of installed font provider packages. Uses "|" as a delimiter
+         *
+         * @hide
+         */
+        public static final String FONT_PACKAGES = "font_packages";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
