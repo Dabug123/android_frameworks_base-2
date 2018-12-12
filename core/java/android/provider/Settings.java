@@ -4721,7 +4721,13 @@ public final class Settings {
          * Wheter to show heads up only for dialer and sms apps
          * @hide
          */
-        public static final String LESS_BORING_HEADS_UP = "less_boring_heads_up";  
+        public static final String LESS_BORING_HEADS_UP = "less_boring_heads_up"; 
+ 
+        /**
+         * Whether to show arrows in the navigation bar while typing
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_MENU_ARROW_KEYS = "navigation_bar_menu_arrow_keys";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
