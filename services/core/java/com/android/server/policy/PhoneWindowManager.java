@@ -4358,6 +4358,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_APP_SWITCH
                             || longPressBehavior == NavbarUtilities.KEY_ACTION_SPLIT_SCREEN
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_SPLIT_SCREEN
+                            || longPressBehavior == NavbarUtilities.KEY_ACTION_FLASHLIGHT
+                            || doubleTapBehavior == NavbarUtilities.KEY_ACTION_FLASHLIGHT
                             || longPressBehavior == NavbarUtilities.KEY_ACTION_LAST_APP
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_LAST_APP) {
                         preloadRecentApps();
@@ -10036,6 +10038,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 break;
             case NavbarUtilities.KEY_ACTION_SPLIT_SCREEN:
                 NavbarUtilities.toggleSplitScreen();
+                break;
+            case NavbarUtilities.KEY_ACTION_FLASHLIGHT:
+                toggleFlashLight();
                 break;
         }
     }
