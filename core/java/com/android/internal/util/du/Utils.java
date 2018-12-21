@@ -58,6 +58,7 @@ public class Utils {
     private static final String TAG = Utils.class.getSimpleName();
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
 
+
     public static final String INTENT_SCREENSHOT = "action_take_screenshot";
     public static final String INTENT_REGION_SCREENSHOT = "action_take_region_screenshot";
 
@@ -302,7 +303,7 @@ public class Utils {
         return false;
     }
 
-    public static boolean killForegroundAppInternal(Context context, int userId)
+    private static boolean killForegroundAppInternal(Context context, int userId)
             throws RemoteException {
         try {
             final Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -314,8 +315,8 @@ public class Utils {
                 defaultHomePackage = res.activityInfo.packageName;
             }
 
-            IActivityManager am = ActivityManagerNative.getDefault();
-            List<ActivityManager.RunningAppProcessInfo> apps = am.getRunningAppProcesses();
+            IActivityManager iam = ActivityManagerNative.getDefault();
+            List<ActivityManager.RunningAppProcessInfo> apps = iam.getRunningAppProcesses();
             for (ActivityManager.RunningAppProcessInfo appInfo : apps) {
                 int uid = appInfo.uid;
                 // Make sure it's a foreground user application (not system,
@@ -327,7 +328,20 @@ public class Utils {
                         for (String pkg : appInfo.pkgList) {
                             if (!pkg.equals(SYSTEMUI_PACKAGE)
                                     && !pkg.equals(defaultHomePackage)) {
-                                am.forceStopPackage(pkg, UserHandle.USER_CURRENT);
+                                iam.forceStopPackage(pkg, UserHandle.USER_CURRENT);
+
+                                final ActivityManager am = (ActivityManager)
+                                        context.getSystemService(Context.ACTIVITY_SERVICE);
+                                final List<ActivityManager.RecentTaskInfo> recentTasks =
+                                        am.getRecentTasks(ActivityManager.getMaxRecentTasksStatic(), UserHandle.USER_CURRENT);
+                                final int size = recentTasks.size();
+                                for (int i = 0; i < size; i++) {
+                                    ActivityManager.RecentTaskInfo recentInfo = recentTasks.get(i);
+                                    if (recentInfo.baseIntent.getComponent().getPackageName().equals(pkg)) {
+                                        int taskid = recentInfo.persistentId;
+                                        iam.removeTask(taskid);
+                                    }
+                                }
                                 return true;
                             }
                         }
