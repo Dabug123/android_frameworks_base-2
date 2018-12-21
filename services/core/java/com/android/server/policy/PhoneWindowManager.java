@@ -4367,6 +4367,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_NOTIFICATIONS
                             || longPressBehavior == NavbarUtilities.KEY_ACTION_POWER_MENU
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_POWER_MENU
+                            || longPressBehavior == NavbarUtilities.KEY_ACTION_SCREENSHOT
+                            || doubleTapBehavior == NavbarUtilities.KEY_ACTION_SCREENSHOT
                             || longPressBehavior == NavbarUtilities.KEY_ACTION_LAST_APP
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_LAST_APP) {
                         preloadRecentApps();
@@ -10075,6 +10077,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case NavbarUtilities.KEY_ACTION_POWER_MENU:
                 triggerVirtualKeypress(KeyEvent.KEYCODE_POWER, false, true);
                 break;
+            case NavbarUtilities.KEY_ACTION_SCREENSHOT:
+                toggleScreenshot();
+                break;
         }
     }
 
@@ -10138,5 +10143,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     private void toggleNotifications() {
         performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, true);
         Utils.Notifications();
+    }
+
+    // Screenshot
+    private void toggleScreenshot() {
+        performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, true);
+        Utils.takeScreenshot(true);
     }
 }
