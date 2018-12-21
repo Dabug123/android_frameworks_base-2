@@ -302,7 +302,7 @@ public class Utils {
         return false;
     }
 
-    private static boolean killForegroundAppInternal(Context context, int userId)
+    public static boolean killForegroundAppInternal(Context context, int userId)
             throws RemoteException {
         try {
             final Intent intent = new Intent(Intent.ACTION_MAIN);
