@@ -4363,6 +4363,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_KILL_APP
                             || longPressBehavior == NavbarUtilities.KEY_ACTION_SCREEN_OFF
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_SCREEN_OFF
+                            || longPressBehavior == NavbarUtilities.KEY_ACTION_NOTIFICATIONS
+                            || doubleTapBehavior == NavbarUtilities.KEY_ACTION_NOTIFICATIONS
                             || longPressBehavior == NavbarUtilities.KEY_ACTION_LAST_APP
                             || doubleTapBehavior == NavbarUtilities.KEY_ACTION_LAST_APP) {
                         preloadRecentApps();
@@ -10057,6 +10059,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case NavbarUtilities.KEY_ACTION_SCREEN_OFF:
                 toggleScreenOff();
                 break;
+            case NavbarUtilities.KEY_ACTION_NOTIFICATIONS:
+                toggleNotifications();
+                break;
         }
     }
 
@@ -10114,5 +10119,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     private void toggleScreenOff() {
         performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, true);
         Utils.switchScreenOff(mContext);
+    }
+
+    // Notifications
+    private void toggleNotifications() {
+        performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, true);
+        Utils.Notifications();
     }
 }
