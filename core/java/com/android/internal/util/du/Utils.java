@@ -58,7 +58,6 @@ public class Utils {
     private static final String TAG = Utils.class.getSimpleName();
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
 
-
     public static final String INTENT_SCREENSHOT = "action_take_screenshot";
     public static final String INTENT_REGION_SCREENSHOT = "action_take_region_screenshot";
 
