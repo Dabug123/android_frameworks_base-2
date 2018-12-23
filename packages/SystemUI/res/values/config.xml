@@ -138,7 +138,7 @@
     <bool name="quick_settings_rssi_tile_capitalization">true</bool>
 
     <!-- Timeouts for brightness dialog to disappear -->
-    <integer name="quick_settings_brightness_dialog_short_timeout">2000</integer>d205be4f10d3ffcd660c2a3c8904254121e57f02
+    <integer name="quick_settings_brightness_dialog_short_timeout">2000</integer>
     <integer name="quick_settings_brightness_dialog_long_timeout">4000</integer>
 
     <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
