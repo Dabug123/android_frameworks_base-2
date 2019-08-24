@@ -3634,7 +3634,6 @@ public class DisplayPolicy {
             if (screenshotType == WindowManager.TAKE_SCREENSHOT_SELECTED_REGION
                     || mService.mPolicy.isKeyguardOccluded()
                     || !mService.mPolicy.isUserSetupComplete()
-                    || !isDeviceProvisioned()
                     || ((inMultiWindow && !dockMinimized) || mDisplayRotation != 0)) {
                 longshot = false;
             } else {
@@ -3661,11 +3660,6 @@ public class DisplayPolicy {
         if (mScreenshotHelper != null) {
             mScreenshotHelper.stopLongshotConnection();
         }
-    }
-
-    private boolean isDeviceProvisioned() {
-        return Settings.Global.getInt(
-                mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 0) != 0;
     }
 
     RefreshRatePolicy getRefreshRatePolicy() {
