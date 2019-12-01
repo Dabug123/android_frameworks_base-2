@@ -127,7 +127,7 @@ public class QSFactoryImpl implements QSFactory {
             Provider<MusicTile> musicTileProvider,
             Provider<ScreenRecordTile> screenRecordTileProvider,
             Provider<MonoToggleTile> monoToggleTileProvider,
-            Provider<ImmersiveTile> immersiveTileProvider),
+            Provider<ImmersiveTile> immersiveTileProvider,
             Provider<SoundSearchTile> soundSearchTileProvider) {
         mWifiTileProvider = wifiTileProvider;
         mBluetoothTileProvider = bluetoothTileProvider;
