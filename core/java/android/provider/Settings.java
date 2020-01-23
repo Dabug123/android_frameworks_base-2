@@ -12798,7 +12798,7 @@ public final class Settings {
          *
          * <pre>
          * enabled                  (boolean)
-         * disable_home             (boolean)
+8         * disable_home             (boolean)
          * disable_tilt_to_wake     (boolean)
          * disable_touch_to_wake    (boolean)
          * </pre>
@@ -12838,7 +12838,7 @@ public final class Settings {
          * Whether or not show new app installed notification is enabled.
          * Type: int (0 for false, 1 for true)
          * Default: 0
-         * @hide
+ 88        * @hide
          */
         public static final String SHOW_NEW_APP_INSTALLED_NOTIFICATION_ENABLED =
                 "show_new_app_installed_notification_enabled";
@@ -15875,11 +15875,6 @@ public final class Settings {
         String[] packages = context.getPackageManager().getPackagesForUid(uid);
         if (packages == null) {
             return null;
-        }
-        return packages[0];
-    }
-}
-  return null;
         }
         return packages[0];
     }

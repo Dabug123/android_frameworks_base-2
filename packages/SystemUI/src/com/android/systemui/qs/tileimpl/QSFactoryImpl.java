@@ -217,7 +217,3 @@ public class QSFactoryImpl implements QSFactory {
         }
     }
 }
-droid.systemui.qs.tileimpl.QSTileView(context, icon);
-        }
-    }
-}
