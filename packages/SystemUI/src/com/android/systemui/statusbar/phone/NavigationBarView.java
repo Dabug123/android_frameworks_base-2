@@ -767,7 +767,13 @@ public class NavigationBarView extends FrameLayout implements
     }
 
     public void setPartialScreenshot(boolean active) {
-        mEdgeBackGestureHandler.setPartialScreenshot(active);
+        int displayId = mContext.getDisplayId();
+        mOverviewProxyService.setSystemUiStateFlag(SYSUI_STATE_OVERVIEW_DISABLED,
+                active ? true : (mDisabledFlags & View.STATUS_BAR_DISABLE_RECENT) != 0,
+                displayId);
+        mOverviewProxyService.setSystemUiStateFlag(SYSUI_STATE_NOTIFICATION_PANEL_EXPANDED,
+                active ? true : mPanelView.isFullyExpanded() && !mPanelView.isInSettings(),
+                displayId);
     }
 
     /**
