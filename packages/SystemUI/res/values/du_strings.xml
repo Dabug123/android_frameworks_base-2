@@ -131,4 +131,8 @@
     <!--Screenrecord Tile-->
     <string name="screenrecorder_title_tile">Screenrecord</string>
 
+    <string name="quick_settings_monotoggle_tile">Audio mode</string>
+    <string name="quick_settings_monotoggle_tile_mono">Mono audio</string>
+    <string name="quick_settings_monotoggle_tile_stereo">Stereo audio</string>
+
 </resources>
