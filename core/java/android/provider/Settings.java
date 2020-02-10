@@ -4702,6 +4702,12 @@ public final class Settings {
         public static final String NOTIFICATION_SOUND_VIB_SCREEN_ON = "notification_sound_vib_screen_on";
 
         /**
+         * Gestures nav: kill app long swipe timeout
+         * @hide
+         */
+        public static final String KILL_APP_LONGSWIPE_TIMEOUT = "kill_app_longswipe_timeout";
+
+        /**
          * Whether to show Brightness Icon On Brightness Slider
          * @hide
          */

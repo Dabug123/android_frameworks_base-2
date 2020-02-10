@@ -1832,6 +1832,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.Secure.AMBIENT_VISUALIZER_ENABLED),
                     false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.KILL_APP_LONGSWIPE_TIMEOUT),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -1858,7 +1861,7 @@ public class StatusBar extends SystemUI implements DemoMode,
             } else if (uri.equals(Settings.Secure.getUriFor(Settings.Secure.LOCKSCREEN_CLOCK_SELECTION))) {
                 updateKeyguardStatusSettings();
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.EDGE_GESTURE_Y_DEAD_ZONE))) {
-                setEdgeGestureDeadZone();
+                setGestureNavOptions();
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_MEDIA_BLUR))) {
                 setLockScreenMediaBlurLevel();
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.SHOW_LOCKSCREEN_MEDIA_ART))) {
@@ -1866,6 +1869,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             } else if (uri.equals(Settings.Secure.getUriFor(
                     Settings.Secure.AMBIENT_VISUALIZER_ENABLED))) {
                 setAmbientVis();
+            } else if (uri.equals(Settings.System.getUriFor(Settings.System.KILL_APP_LONGSWIPE_TIMEOUT))) {
+                setGestureNavOptions();
+
             }
         }
 
@@ -1876,7 +1882,7 @@ public class StatusBar extends SystemUI implements DemoMode,
             setStatusBarWindowViewOptions();
             setPulseOnNewTracks();
             updateKeyguardStatusSettings();
-            setEdgeGestureDeadZone();
+            setGestureNavOptions();
             setLockScreenMediaBlurLevel();
             setLockScreenMediaArt();
             setAmbientVis();
@@ -1894,9 +1900,10 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
-    private void setEdgeGestureDeadZone() {
+    private void setGestureNavOptions() {
         if (getNavigationBarView() != null) {
             getNavigationBarView().setEdgeGestureDeadZone();
+            getNavigationBarView().setKillAppTimeout();
         }
     }
 

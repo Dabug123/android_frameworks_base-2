@@ -766,6 +766,10 @@ public class NavigationBarView extends FrameLayout implements
         mEdgeBackGestureHandler.setEdgeGestureDeadZone();
     }
 
+    public void setKillAppTimeout() {
+        mEdgeBackGestureHandler.setKillAppTimeout();
+    }
+
     public void setPartialScreenshot(boolean active) {
         int displayId = mContext.getDisplayId();
         mOverviewProxyService.setSystemUiStateFlag(SYSUI_STATE_OVERVIEW_DISABLED,
