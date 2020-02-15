@@ -4493,6 +4493,13 @@ public final class Settings {
             }
         };
 
+        /** @hide */
+        public static final String GESTURE_PILL_TOGGLE = "gesture_pill_toggle";
+
+        /** @hide */
+        private static final Validator GESTURE_PILL_TOGGLE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
         /**
          * How many rows to show in the qs panel when in portrait
          * @hide
@@ -4796,6 +4803,7 @@ public final class Settings {
             DISPLAY_COLOR_MODE,
             ALARM_ALERT,
             NOTIFICATION_LIGHT_PULSE,
+            GESTURE_PILL_TOGGLE,
         };
 
         /**
@@ -4915,6 +4923,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(EGG_MODE);
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
+            PRIVATE_SETTINGS.add(GESTURE_PILL_TOGGLE);
         }
 
         /**
@@ -5010,6 +5019,7 @@ public final class Settings {
             VALIDATORS.put(NOTIFICATION_LIGHT_PULSE, BOOLEAN_VALIDATOR);
             VALIDATORS.put(ACCELEROMETER_ROTATION_ANGLES,
                     ACCELEROMETER_ROTATION_ANGLES_VALIDATOR);
+            VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
         }
 
         /**
