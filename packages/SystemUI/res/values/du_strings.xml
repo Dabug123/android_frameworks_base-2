@@ -41,6 +41,11 @@
 
     <!-- Icon manager -->
     <string name="systemui_tuner_icon_manager_title">Icon manager</string>
+    <string name="misc_statusbar_items_category_title">Misc</string>
+
+    <!--  Franken logo -->
+    <string name="du_logo_title">Franken Head</string>
+    <string name="du_logo_summary">Show the world you love FrankenKang</string>
 
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
     <string name="global_action_screenshot_cust">Screenshot</string>
