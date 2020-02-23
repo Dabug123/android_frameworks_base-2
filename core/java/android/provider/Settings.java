@@ -4694,6 +4694,12 @@ public final class Settings {
          */
         public static final String SHOW_LOCKSCREEN_MEDIA_ART = "show_lockscreen_media_art";
 
+        /**
+         * Adjust the display refresh rate
+         * @hide
+         */
+        public static final String REFRESH_RATE_SETTING = "refresh_rate_setting";
+
        /**
          * Whether to change the transparency of the qs panel
          * @hide
