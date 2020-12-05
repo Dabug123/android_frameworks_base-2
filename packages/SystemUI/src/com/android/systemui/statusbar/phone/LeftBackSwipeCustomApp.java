@@ -6,8 +6,8 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.ListView;
 
-import com.abc.support.R;
-import com.abc.support.preferences.AppPicker;
+import com.dirtyunicorns.support.R;
+import com.dirtyunicorns.support.preferences.AppPicker;
 
 public class LeftBackSwipeCustomApp extends AppPicker {
 
